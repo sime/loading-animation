@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Bojagi Loading Spinner</title>
+<style>
+body {
+  
+}
+.wrapper {
+  margin: 250px auto 0 auto;
+  width: 208px;
+  height: 208px;
+  user-select: none;
+
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.cube {
+  margin: 2px;
+  width: 100px;
+  height: 100px;
+  background: #f00;
+  float: left;
+  border-radius: 20px;
+  transition: 1300ms;
+
+  animation-fill-mode: none;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.26, 2.41, 0.88, 1.54); /*ease-in-out;*/
+}
+
+.one {
+  background-color: #ff2c5e;
+  transform: translate(0);
+  animation-name: spread-top-left;
+}
+.two {
+  background-color: #6a48f6;
+  transform: translate(0);
+  animation-name: spread-top-right;
+}
+.three {
+  background-color: #1fd3c7;
+  transform: translate(0);
+  animation-name: spread-bottom-left;
+}
+.four {
+  background-color: #00a6fd;
+  transform: translate(0);
+  animation-name: spread-bottom-right;
+}
+
+@keyframes spin {
+  60% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(720deg);
+  }
+}
+
+@keyframes spread-top-left {
+  40% {
+    transform: translate(0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-100px, -50px) rotate(-270deg);
+  }
+}
+
+@keyframes spread-top-right {
+  40% {
+      transform: translate(0) rotate(0deg);
+  }
+  20%{
+      transform: translate(100px, -50px) rotate(270deg);
+  }
+}
+
+
+@keyframes spread-bottom-left {
+  40% {
+    transform: translate(0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-100px, 50px) rotate(270deg);
+  }
+}
+
+@keyframes spread-bottom-right {
+  40% {
+    transform: translate(0) rotate(0deg);
+  }
+  20% {
+    transform: translate(100px, 50px) rotate(-270deg);
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="cube one"></div>
+  <div class="cube two"></div>
+  <div class="cube three"></div>
+  <div class="cube four"></div>
+</div>
+</body>
+</html>
